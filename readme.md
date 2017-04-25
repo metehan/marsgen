@@ -17,7 +17,7 @@ This command will fetch every file under */example/planets* folder and it will l
 Seed file and output folder are optional. If no output folder defined it will generate files on the folder where command called from.
 
 # Templating and Syntax 
-Seed files and folders may have variables. Lets say you want to generate VenusModel.php VenusView.php you can name the templaste files as -Planet-Model.php and -Planet-View.php and put this variable on seed file.
+Template file names and folder names may have variables. Lets say you want to generate VenusModel.php and VenusView.php you can name the template files as -Planet-Model.php and -Planet-View.php and set what to replace in seed file. Inside ```__FileSystem__``` everything will be replaced by using *str_replace()* function.
 ```php
 $seed['__FileSystem__'] = [
   '-Planet-' => 'Venus'
@@ -27,7 +27,7 @@ $seed['myArray'] = [['name'=>'item1'],['name'=>'item2']];
 ```
 In template files you can place variables with ```/*{myVar}*/``` syntax with above seed file this will generate ```Hello world``` as output.
 
-You can loop code blocks with for ```/*{for:myArray}*/ Name value is /*{myArray>name}*/. /*{/for*/}``` as you can see to access sub values of for item we use ```/*{myArray>name}*/``` syntax. This for each will generate ```Name value is: item1. Name value is: item2.``` You can use isset blocks inside for blocks.
+You can loop code blocks with "for" ```/*{for:myArray}*/ Name value is /*{myArray>name}*/. /*{/for*/}``` This "for" loop will output: ```Name value is: item1. Name value is: item2.``` You can use isset blocks inside for blocks. Probably you already noticed syntax for accessing array values is: ```/*{myArray>name}*/```
 
 Isset block is simple ``` /*{isset:myVar}*/ myVar's value is /*{myVar}*/ /*{/isset}*/```
 
@@ -130,13 +130,13 @@ class MercuryController extends BaseController
 }
 ``` 
 
-##### Notes:
+#### Notes:
   - Nested foreach() and isset() controls are not supported.
   - There is no else condition for isset() function for now.
 
 This is a personal helper repository for one of my projects so I only included functions what I needed. If you add more functionality please send a pull request to my repository so everyone can enjoy it :)
 
-##### Plans:
+#### Roadmap:
 Current version is enough for my needs but I may add these features to template parser later.
   - Option to add values from command line instead of seed file
   - Else condition for isset().
