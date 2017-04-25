@@ -1,7 +1,7 @@
 {
   "name": "metehan/marsgen",
   "description": "A PHP code generation and scaffolding tool.",
-  "version": "0.1.0"
+  "version": "0.1.0",
   "license": "MIT",
   "require": {
     "symfony/Console": "2.*"
