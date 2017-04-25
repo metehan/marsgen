@@ -143,3 +143,4 @@ Current version is enough for my needs but I may add these features to template 
   - If/else condition.
   - Switch/Case condition.
   - Nested foreach support. 
+  - Global command line support.
