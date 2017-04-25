@@ -1,0 +1,10 @@
+{
+	"require": {
+		"symfony/Console": "2.*"
+	},
+	"autoload": {
+		"psr-4": {
+			"Marsgen\\": "src/"
+		}
+	}
+}

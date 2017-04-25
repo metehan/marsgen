@@ -1,0 +1,2 @@
+  /*{isset:the_planet}*/ The value {the_planet} is set and it's value is '/*{the_planet}*/'/*{/isset}*/
+  /*{isset:notset}*/ value is not set /*{/isset}*/

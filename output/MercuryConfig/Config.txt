@@ -1,0 +1,2 @@
+   The value {the_planet} is set and it's value is 'Mercury'
+  
